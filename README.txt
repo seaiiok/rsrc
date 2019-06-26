@@ -9,6 +9,9 @@ rsrc [-manifest FILE.exe.manifest] [-ico FILE.ico[,FILE2.ico...]] -o FILE.syso
   The .syso file can be linked by Go linker when building Win32 executables.
   Icon embedded this way will show up on application's .exe instead of empty icon.
   Manifest file embedded this way will be recognized and detected by Windows.
+  
+eg.
+rsrc -manifest main.exe.manifest -ico app.ico -o main.syso
 
 The generated *.syso files should get automatically recognized by 'go build'
 command and linked into an executable/library, as long as there are any *.go
@@ -34,3 +37,4 @@ LICENSE: MIT
   Copyright 2013-2017 The rsrc Authors.
 
 http://github.com/akavel/rsrc
+
